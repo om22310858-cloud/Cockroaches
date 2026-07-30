@@ -1,0 +1,262 @@
+# 💬 Local Ollama Chatbot
+
+A ChatGPT-like AI chatbot built using **Streamlit**, **FastAPI**, **Ollama**, and **SQLite**. The application supports multiple chat sessions with persistent chat history and streams responses from locally running LLMs such as **Llama 3**.
+
+---
+
+## 🚀 Features
+
+- 🤖 Chat with locally running Ollama models
+- 💬 ChatGPT-style user interface
+- ⚡ Real-time streaming responses
+- 🗂️ Persistent multi-chat history
+- 🗑️ Delete chat sessions
+- 🌡️ Adjustable temperature
+- 🧠 Custom system prompt
+- 📦 SQLite database for chat storage
+- 🔄 FastAPI backend
+- 🎨 Streamlit frontend
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology | Purpose |
+|------------|---------|
+| Python | Programming Language |
+| Streamlit | Frontend UI |
+| FastAPI | Backend API |
+| Ollama | Local LLM Runtime |
+| Llama 3 | Large Language Model |
+| SQLite | Chat History Database |
+| Requests | API Communication |
+| HTTPX | Async HTTP Client |
+| Pydantic | Data Validation |
+
+---
+
+## 📂 Project Structure
+
+```
+Cockroaches/
+│
+├── backend.py          # FastAPI backend
+├── frontend.py         # Streamlit frontend
+├── db.py               # SQLite database functions
+├── chat_history.db     # Chat history database
+├── requirements.txt
+├── README.md
+```
+
+---
+
+## ⚙️ Requirements
+
+- Python 3.10+
+- Ollama
+- Llama 3 or Llama 3.2 model
+
+---
+
+## 📥 Installation
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/om22310858-cloud/Cockroaches.git
+cd Cockroaches
+```
+
+---
+
+### 2. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+### 3. Install Ollama
+
+Download from
+
+https://ollama.com/download
+
+---
+
+### 4. Pull a model
+
+```bash
+ollama pull llama3
+```
+
+or
+
+```bash
+ollama pull llama3.2
+```
+
+---
+
+### 5. Start Ollama
+
+```bash
+ollama serve
+```
+
+---
+
+### 6. Start the FastAPI backend
+
+```bash
+uvicorn backend:app --reload --port 8000
+```
+
+Backend API
+
+```
+http://localhost:8000
+```
+
+Swagger Documentation
+
+```
+http://localhost:8000/docs
+```
+
+---
+
+### 7. Start Streamlit
+
+```bash
+streamlit run frontend.py
+```
+
+Open
+
+```
+http://localhost:8501
+```
+
+---
+
+## 📷 Screenshots
+
+### Chat Interface
+
+_Add screenshot here_
+
+### Multiple Chat Sessions
+
+_Add screenshot here_
+
+### Settings Panel
+
+_Add screenshot here_
+
+---
+
+## 📡 API Endpoints
+
+### List Models
+
+```
+GET /models
+```
+
+Returns all installed Ollama models.
+
+---
+
+### Chat
+
+```
+POST /chat
+```
+
+Streams chat responses.
+
+---
+
+### Health Check
+
+```
+GET /health
+```
+
+Returns backend status.
+
+---
+
+## 💾 Database
+
+SQLite stores:
+
+- Chat Sessions
+- Messages
+- Creation Time
+
+Database file:
+
+```
+chat_history.db
+```
+
+---
+
+## ✨ Future Improvements
+
+- PDF Chat (RAG)
+- Voice Input
+- Image Understanding
+- Code Syntax Highlighting
+- Chat Rename
+- Export Chats
+- Authentication
+- Docker Support
+- Multi-user Support
+- Vector Database
+- Memory
+
+---
+
+## 📌 Demo
+
+Frontend
+
+```
+http://localhost:8501
+```
+
+Backend
+
+```
+http://localhost:8000
+```
+
+---
+
+## 👨‍💻 Author
+
+**Om Khirade**
+
+Electronics & Telecommunication Engineering
+
+AI • Machine Learning • Generative AI
+
+GitHub
+
+https://github.com/om22310858-cloud
+
+---
+
+## ⭐ Support
+
+If you found this project useful, please give it a ⭐ on GitHub.
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
